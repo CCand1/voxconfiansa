@@ -1,0 +1,466 @@
+/* === GLOBAL STYLES === */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f0f0f0;
+}
+
+/* === HEADER & NAVBAR === */
+header {
+  background: none; /* no colored background */
+  display: block; /* stack navbar & hero vertically */
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem 3rem;
+  border-radius: 0 0 10px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* NAV CONTAINER */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* pushes nav links right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 2rem; /* subtle offset to right */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center; /* aligns image and text horizontally */
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 50px; /* adjust size */
+  width: auto;
+  margin-right: 10px; /* space between image and text */
+}
+
+/* NAV MENU */
+.main-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV LINKS */
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a {
+  position: relative;
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3b7f84;
+  transition: width 0.3s ease;
+}
+.main-nav a:hover::after {
+  width: 100%;
+}
+.main-nav a:hover {
+  color: #3b7f84; /* teal accent */
+}
+
+/* MOBILE MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+  background: url("../Image/cours-presentation-voxconfidansa.JPG") center/cover
+    no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem; /* was 7rem 2rem 6rem */
+  position: relative;
+  margin-top: 0;
+  border-top: 2px solid #eee;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #3b7f84;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.cta-btn:hover {
+  background-color: #2d6064;
+}
+
+/* === INTRO + CONTENT SECTIONS === */
+.intro-section {
+  background-color: #f6f6f6;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #333;
+}
+.h2 {
+  color: black;
+}
+.intro-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content-section {
+  margin-top: 20px; /* adjust as needed */
+  padding-top: 0; /* remove extra padding */
+}
+
+.content-section h2 {
+  margin-top: 0; /* remove h2 default top margin */
+  padding-top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px 20px;
+  margin: 0 auto;
+  max-width: 1800px;
+  box-sizing: border-box;
+}
+#formations {
+  text-align: center;
+}
+.courses-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.course-column {
+  flex: 1;
+}
+.course-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.course-card h3 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+  text-align: center;
+}
+
+.course-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.course-card li {
+  margin-bottom: 10px;
+  font-family: "Roboto", Arial, sans-serif; /* or your chosen font */
+  color: #333;
+}
+.course-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.underline {
+  text-decoration: underline;
+}
+.lower-text {
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.course-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === TYPOGRAPHY === */
+h3 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+}
+
+h4 {
+  border-top: 4px;
+  line-height: 1.8;
+}
+
+p {
+  color: black;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+p a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+/* General section styling */
+.intro-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Container */
+.intro-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.intro-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+/* Paragraphs */
+.intro-section .intro-text {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  text-align: justify; /* professional look */
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 40px 15px;
+  }
+
+  .intro-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .intro-section .intro-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* === CERTIFICATION BOX === */
+.certification-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.certification-box img {
+  width: 33rem;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 5px;
+}
+
+/* === IMAGE SECTIONS === */
+.images-container {
+  display: flex;
+  gap: 10px;
+}
+
+.images-gallery {
+  flex: 1;
+  margin: 0;
+}
+
+.travel-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 1rem;
+  margin: 3px;
+}
+
+.travel-images img {
+  padding: 6px;
+  border-radius: 1rem;
+}
+
+.image-container {
+  text-align: center;
+}
+
+/* === FOOTER === */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .main-content {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .images-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    width: 100%;
+  }
+
+  .images-container img {
+    display: block !important;
+    width: 90vw !important;
+    max-width: 38rem !important;
+    height: 15rem !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    margin-bottom: 5px;
+    border: none !important;
+    outline: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+  }
+}
+
+/* === SMALL SCREENS (IPHONES) === */
+@media (max-width: 480px) {
+  .main-content {
+    display: block !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  nav ul.main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.main-nav.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .certification-box img {
+    width: 22rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem !important;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}
