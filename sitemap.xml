@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.voxconfiansa.com/</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://www.voxconfiansa.com/en/</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <url>
+      <loc>https://www.voxconfiansa.com/sv/</loc>
+      <lastmod>2025-10-31</lastmod>
+      <changefreq>weekly</changefreq>
+   </url>
+   <!-- Add other course or content pages here -->
+</urlset>
