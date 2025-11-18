@@ -179,13 +179,13 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-.course-img {
-  width: 100%;           /* fills the card but stays responsive */
-  max-width: 320px;      /* prevents it from becoming huge */
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 10px auto 15px; /* centers the image below the text */
+.course-column:nth-child(2) .course-card img {
+  display: block;        /* make it appear on a new line */
+  max-width: 100%;       /* stay within the column width */
+  height: auto;          /* maintain aspect ratio */
+  margin-top: 1rem;      /* space above the image */
+  margin-left: auto;     /* center horizontally */
+  margin-right: auto;
 }
 /* === MAIN CONTENT === */
 .main-content {
@@ -471,6 +471,7 @@ footer {
     height: 3rem !important;
   }
 }
+
 
 
 
