@@ -179,7 +179,14 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.course-img {
+  width: 100%;           /* fills the card but stays responsive */
+  max-width: 320px;      /* prevents it from becoming huge */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto 15px; /* centers the image below the text */
+}
 /* === MAIN CONTENT === */
 .main-content {
   display: flex;
@@ -464,6 +471,7 @@ footer {
     height: 3rem !important;
   }
 }
+
 
 
 
